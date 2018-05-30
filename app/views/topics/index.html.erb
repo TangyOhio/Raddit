@@ -1,0 +1,10 @@
+<h1>Click a Topic To View Content</h1>
+<%= link_to 'Create a new topic', new_sub_topic_path(@sub) %>
+- | -
+<%= link_to 'Back to Sub', sub_path(@sub) %>
+<hr />
+<ul>
+  <% @topics.each do |topic| %>
+    <li><%= link_to topic.name, [@sub, topic] %></li>
+  <% end %>
+</ul>
